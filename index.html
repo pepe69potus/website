@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepe69 POTUS | $PRESIDENT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <audio autoplay>
+        <source src="na.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+
+    </audio>
+    <div id="content" class="content">
+        <p class="archivo-black-regular big"><span id="timer"></span></p>
+        <h1>$PRESIDENT</h1>
+        <p>Pepe The 69th President of The United States</p>
+        <div class="wrap">
+            <div class="card-meet">
+                <h1 class="">Meet President Pepe</h1>
+                <div class="card-meet-content">
+                    <img src="pepe-trans.png" />
+                    <div>
+                        <h1 class="small-h">Specialities of Mr President</h1>
+                        <ol>
+                            <li>
+                                Sent by God to help the US
+
+                            </li>
+                            <li>
+                                Replaced US dollars with $PRESIDENT
+                            </li>
+                            <li>
+                                Loves everyone
+                            </li>
+                            <li>
+                                Retired memer
+                            </li>
+                            <li>
+                                Crypto Trader ($1B/Day Earner)
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="wrap-mint">
+            <div class="mint-box">
+                <h1>Mint</h1>
+                <div class="mint-box-content">
+                    <img width="200" height="200" src="mint.png" />
+                    <div>
+                        <ul>
+                            <li>
+                                <p>
+                                    Supply: 10M $PRESIDENT
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    LP Status: Locked
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Chain: Solana
+                                </p>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="mint-box">
+                <h1>President's Socials</h1>
+                <div class="mint-box-content">
+                    <img width="200" height="200" src="social.png" />
+                    <div>
+                        <ol class="archivo-black-regular">
+                            <li>
+                                <a href="https://t.me/pepepotus69">
+                                    <p>Telegram</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://x.com/pepe69potus">
+                                    <p>
+                                        Twitter
+                                    </p>
+                                </a>
+
+                            </li>
+
+                        </ol>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const numFlags = 200; // Number of flags to create
+        const container = document.body;
+
+        // Create and append flags
+        for (let i = 0; i < numFlags; i++) {
+            const flag = document.createElement('div');
+            flag.className = 'flag';
+            flag.style.left = `${Math.random() * 100}vw`; // Random horizontal position
+            flag.style.animationDuration = `${Math.random() * 3 + 2}s`; // Random duration
+            flag.innerHTML = '<img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="US Flag" width="50">';
+            container.appendChild(flag);
+        }
+
+        // Show content after flag animation ends
+        const content = document.getElementById('content');
+        container.addEventListener('animationend', (event) => {
+            if (event.target.classList.contains('flag')) {
+                content.classList.add('show-content');
+            }
+        });
+
+        const countdownDate = new Date('2024-02-27T20:00:00Z').getTime();
+
+        // Update the countdown every second
+        const timer = setInterval(function () {
+            // Get the current date and time
+            const now = new Date().getTime();
+
+            // Calculate the difference between now and the countdown date
+            const difference = countdownDate - now;
+
+            // Calculate days, hours, minutes, and seconds
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            // Display the countdown
+            document.getElementById('timer').innerHTML = `Launch in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            // If the countdown is over, display a message
+            if (difference < 0) {
+                clearInterval(timer);
+                document.getElementById('timer').innerHTML = 'Countdown is over!';
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
